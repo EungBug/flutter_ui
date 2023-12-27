@@ -10,8 +10,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: RecipePage(),
+    return MaterialApp(
+      theme: ThemeData(fontFamily: "PatuaOne"),
+      home: const RecipePage(),
     );
   }
 }
