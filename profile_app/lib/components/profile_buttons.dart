@@ -15,10 +15,45 @@ class ProfileButtons extends StatelessWidget {
   }
 
   Widget _buildFollowButton() {
-    return const SizedBox();
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        alignment: Alignment.center,
+        width: 150,
+        height: 45,
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: const Text(
+          'Follow',
+          style: TextStyle(
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
   }
 
   Widget _buildMessageButton() {
-    return const SizedBox();
+    return InkWell(
+      onTap: () {},
+      child: Container(
+        alignment: Alignment.center,
+        width: 150,
+        height: 45,
+        decoration: BoxDecoration(
+          color: Colors.white,
+          border: Border.all(),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: const Text(
+          'Message',
+          style: TextStyle(
+            color: Colors.black,
+          ),
+        ),
+      ),
+    );
   }
 }
