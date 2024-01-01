@@ -20,10 +20,39 @@ class ProfileHeader extends StatelessWidget {
   }
 
   Widget _buildHeaderAvatar() {
-    return const SizedBox();
+    return const SizedBox(
+      width: 100,
+      height: 100,
+      child: CircleAvatar(
+        backgroundImage: AssetImage("assets/avatar.png"),
+      ),
+    );
   }
 
   Widget _buildHeaderProfile() {
-    return const SizedBox();
+    return const Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'EungBug',
+          style: TextStyle(
+            fontSize: 25,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
+        Text(
+          '프론트엔드 개발자',
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+        Text(
+          'OO 개발회사',
+          style: TextStyle(
+            fontSize: 15,
+          ),
+        )
+      ],
+    );
   }
 }
