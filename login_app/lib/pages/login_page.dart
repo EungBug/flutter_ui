@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/components/logo.dart';
+import 'package:login_app/size.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -6,9 +8,13 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.yellow,
-      ),
-    );
+        body: ListView(
+      children: const [
+        SizedBox(
+          height: xlarge_gap,
+        ),
+        Logo(title: 'Login'),
+      ],
+    ));
   }
 }
