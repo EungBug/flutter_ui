@@ -22,7 +22,12 @@ class CustomForm extends StatelessWidget {
             height: large_gap,
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: () {
+              // 유효성 검사
+              if (_formKey.currentState!.validate()) {
+                Navigator.pushNamed(context, '/home');
+              }
+            },
             child: const Text("Login"),
           ),
         ],
