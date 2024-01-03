@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_app/components/custom_form.dart';
 import 'package:login_app/components/logo.dart';
 import 'package:login_app/size.dart';
 
@@ -8,13 +9,19 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
-      children: const [
-        SizedBox(
-          height: xlarge_gap,
-        ),
-        Logo(title: 'Login'),
-      ],
+        body: Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: ListView(
+        children: [
+          const SizedBox(
+            height: xlarge_gap,
+          ),
+          const Logo(
+            title: 'Login',
+          ),
+          CustomForm(),
+        ],
+      ),
     ));
   }
 }
